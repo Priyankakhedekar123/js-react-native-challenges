@@ -18,11 +18,21 @@ const profiles = require("./userData");
 */
 
 console.log();
+  console.log(isArray(profiles));
+
+
+function isString (value) {
+	return typeof value === 'string' || value instanceof String;
+};
+function isArray (value) {
+	return value && typeof value === 'object' && value.constructor === Array;
+};
 
 /*
   1.2 Log of the size of the data returned
   Expected output: "We just fetched [x] users" where x represents the actual number
 */
+console.log('We just fetched '+profiles.length+' users');
 
 console.log();
 
@@ -31,6 +41,7 @@ console.log();
   Expected output: an array with the first 5 items
 */
 console.log();
+console.log(profiles.slice(0,5));
 
 /*
   1.4 Remove the first profile from this data while returning it at the same time
@@ -39,6 +50,11 @@ console.log();
 
 console.log();
 console.log();
+var firstProfile = profiles.shift();
+
+console.log(profiles);
+console.log(firstProfile); 
+
 
 /*
   1.5 Paginate the api results in sets of variable amounts

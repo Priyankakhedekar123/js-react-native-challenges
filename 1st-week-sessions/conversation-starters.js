@@ -48,3 +48,77 @@ const partner = {
 /* 
   Start writing function here
 */
+
+
+
+ console.log(createConversationStarters(me,partner));
+
+function createConversationStarters(me,partner){
+
+ const result = [];
+
+ if(compareMaratialSTatus(me,partner))
+ {
+  result.push("you both are Unmarried."); 
+ }
+  if(compareEducation(me,partner))
+ {
+    result.push("You both did "+me.ducation);
+ 
+ }
+  if(compareCommunity(me,partner))
+ {
+    result.push("she is from the "+me.community+" community as well");
+
+ }
+    if(compareCity(me,partner))
+ {
+    result.push("You both live in "+me.location.city);
+ 
+ }
+  
+   if(compareState(me,partner))
+ {
+     result.push("You both live in "+me.location.state);
+ }
+    if(compareCuisine(me,partner))
+ {
+     cuisine= "You both eats"+location.cuisine;
+ }
+
+ return result;
+}
+
+
+
+
+
+function compareMaratialSTatus(me,partner){
+ return me.neverMarried==partner.neverMarried
+   
+ }
+
+  function compareEducation(me,partner){
+   return me.education===partner.education
+   
+ }
+  
+    function compareCommunity(me,partner){
+  return me.community===partner.community
+    
+ }
+        function compareCity(me,partner){
+ return me.location.city===partner.location.city
+   
+  }
+ 
+          function compareState(me,partner){
+ return me.location.state===partner.location.state
+  }
+ 
+      
+          function compareCuisine(me,partner){
+  return me.cuisine===partner.cuisine
+  }
+ 
+
